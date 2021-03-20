@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 
 import Aboutus from './components/Aboutus';
 import Signin from './components/Signin';
+import Contact from './components/Contact';
+
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -23,8 +25,7 @@ function App() {
           <Route  path="/Home" exact component={Home} />
           <Route  path="/aboutus" component={Aboutus} />
           <Route  path="/Signin" component={Signin}/>
-        
-         
+          <Route  path="/Contact" component={Contact}/>
         </Switch>
         <Footer/>
       </BrowserRouter>

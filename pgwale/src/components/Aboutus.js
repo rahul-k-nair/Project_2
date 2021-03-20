@@ -1,23 +1,37 @@
-import React from 'react';
+import React ,{ useEffect }from 'react';
 import {Link} from 'react-router-dom';
-import {Card,Button,Carousel} from 'react-bootstrap';
+import {Carousel} from 'react-bootstrap';
 import { FaFacebookSquare,FaLinkedin } from 'react-icons/fa';
 import {IoLogoYoutube} from 'react-icons/io';
 import { AiFillInstagram } from 'react-icons/ai';
-
+import './Aboutus.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import Aos from 'aos';
+import Contact from './Contact';
 export default function Aboutus() {
+  useEffect(() => {
+    Aos.init({
+      duration:1000,
+      offset:250,
+    });
+  },[]);
   return (
     <div className="container aboutus">
         <div className="row">
         <div className="col-md-6 col-12 my-auto">
+        <div data-aos="fade-up-right">
                 <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60" alt="about us" className="img-fluid" />
+                </div>
             </div>
             <div className="col-md-6 col-12 my-auto">
-
+            <div data-aos="fade-up-left">
                 <h1 className="display-4 text-center my-5">About Us </h1>
                 <p className="lead text-justify text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas officia eligendi dolorem molestias nesciunt aliquam deserunt velit fuga quidem atque?</p>
+                
                 <div className="text-center col-md-6 col-12 mx-auto">
-                    <Link to="/contact" className="btn btn-outline-dark btn-block btn-lg my-5">Contact us</Link>
+                    <Link to="./Contact" className="btn btn-outline-dark btn-block btn-lg my-5">Contact us</Link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,7 +87,8 @@ export default function Aboutus() {
         </div>
         <div className="team">
             <h1 className="display-4">Our Team</h1>
-        </div>
+            </div>
+            <div data-aos="zoom-in-up">
         <div className="row mb-5">
             <div className="col-md-4 col-12 mx-auto my-2">
                 <div className="card border-0 shadow-lg p-4">
@@ -127,106 +142,81 @@ export default function Aboutus() {
                 </div>
             </div>
             </div>
-        <div className="bg-light p-5" > 
+            </div>
+            
+          
+           
+ <div className="bg-light  p-5" > 
     <h1 className="text-center">Our Famous Customers Saying</h1>
-    <div className="row">
-      <div className="col-md-4">
-        <div className="card text-center p-3">
-          <div className="card-body">
-            <h5 className="card-title">Dwayne Johnson</h5>
-            <p className="card-text">Lorem empora accusantium doloremque libero magnam dolorum veritatis vel aspernatur.aliquam eaque.</p>
-          </div>
-          </div>
-      </div>
-          <div className="col-md-4">
-            <div className="card text-center p-3">
-              <div className="card-body">
-                <h5 className="card-title">Justin Bieber</h5>
-                <p className="card-text">Lorem empora accusantium doloremque libero magnam dolorum veritatis vel aspernatur.aliquam eaque..</p>
-              </div>
-              </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card text-center p-3" >
-                  <div className="card-body">
-                    <h5 className="card-title">David Beckham</h5>
-                    <p className="card-text">Lorem empora accusantium doloremque libero magnam dolorum veritatis vel aspernatur.aliquam eaque..</p>
-                  </div>
-                  </div>
-                  </div>
-                  </div>
-                  <div className="row mt-3" >
-                  <div className="col-md-4">
-        <div className="card text-center p-3" >
-          <div className="card-body">
-            <h5 className="card-title">Michael Jordan</h5>
-            <p className="card-text">Lorem empora accusantium doloremque libero magnam dolorum veritatis vel aspernatur.aliquam eaque..</p>
-          </div>
-          </div>
-          </div>
-          <div className="col-md-4 ">
-            <div className="card text-center p-3" >
-              <div className="card-body">
-                <h5 className="card-title">George Clooney</h5>
-                <p className="card-text">Lorem empora accusantium doloremque libero magnam dolorum veritatis vel aspernatur.aliquam eaque..</p>
-              </div>
-        </div>
-      </div>
-      <div className="col-md-4">
-        <div className="card text-center p-3" >
-          <div className="card-body">
-            <h5 className="card-title">Ariana Grande</h5>
-            <p className="card-text">Lorem empora accusantium doloremque libero magnam dolorum veritatis vel aspernatur.aliquam eaque..</p>
-          </div>
-    </div>
-  </div>
-</div>
-  </div>
-  <div className="container contact">
-    <div className="row">
-        <div className="col-md-8 col-12 mx-auto">
-            <div className="card shadow-lg border-0 p-4">
-                <h1 className="text-center bg-dark text-white display-4 d-inline-block">Contact us</h1>
-                <div className="form-group my-5">
-                    <div className="row">
-                        <div className="col-md-6 col-12 mx-auto my-2">
-                            <input type="text" className="form-control-lg" placeholder="First Name" required />
-                        </div>
-                        <div className="col-md-6 col-12 mx-auto my-2">
-                            <input type="text" className="form-control-lg" placeholder="last Name" required />
-                        </div>
-                    </div>
+
+<div className="review">
+        <div className="row">
+            <div className="col-md-4">
+                <div className="card">
+                    <h2>Ariana Grande</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Sint pariatur atque 
+                         id incidunt velit cum omnis sed ut voluptatem, assumenda quae neque similique 
+                        deserunt alias fugiat dolorem adipisci fugit excepturi!</p>
                 </div>
-                <div className="form-group mb-5">
-                    <div className="row">
-                        <div className="col-md-6 col-12 mx-auto my-2">
-                            <input type="email" className="form-control-lg" placeholder="Email Address" required />
-                        </div>
-                        <div className="col-md-6 col-12 mx-auto my-2">
-                            <input type="tel" className="form-control-lg" placeholder="Phone no." required />
-                        </div>
-                    </div>
+            </div>
+            <div className="col-md-4">
+                <div className="card">
+                    <h2>Dwayne Johnson</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Sint pariatur atque 
+                         id incidunt velit cum omnis sed ut voluptatem, assumenda quae neque similique 
+                        deserunt alias fugiat dolorem adipisci fugit excepturi!</p>
                 </div>
-                <div className="row">
-                    <div className="col-11">
-                        <textarea className="form-control" row="20" placeholder="Your message" required></textarea>
-                    </div>
-                </div>
-                <div className="mt-5 col-md-6 col-12 mx-auto">
-                    <button className="btn btn-outline-dark btn-lg btn-block">Send Message</button>
+            </div>
+            <div className="col-md-4">
+                <div className="card">
+                    <h2>George Clooney</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Sint pariatur atque 
+                         id incidunt velit cum omnis sed ut voluptatem, assumenda quae neque similique 
+                        deserunt alias fugiat dolorem adipisci fugit excepturi!</p>
                 </div>
             </div>
         </div>
+        <div className="row mt-3">
+            <div className="col-md-4">
+                <div className="card">
+                    <h2>Michael Jordan</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Sint pariatur atque 
+                         id incidunt velit cum omnis sed ut voluptatem, assumenda quae neque similique 
+                        deserunt alias fugiat dolorem adipisci fugit excepturi!</p>
+                </div>
+            </div>
+            <div className="col-md-4">
+                <div className="card">
+                    <h2>David Beckham</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Sint pariatur atque 
+                         id incidunt velit cum omnis sed ut voluptatem, assumenda quae neque similique 
+                        deserunt alias fugiat dolorem adipisci fugit excepturi!</p>
+                </div>
+            </div>
+            <div className="col-md-4">
+                <div className="card">
+                    <h2>Justin Bieber </h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Sint pariatur atque 
+                         id incidunt velit cum omnis sed ut voluptatem, assumenda quae neque similique 
+                        deserunt alias fugiat dolorem adipisci fugit excepturi!</p>
+                </div>
+            </div>
+
+            </div>
+
     </div>
 </div>
-
-
-
-
 
 
 
   
+    <Contact/>
   </div>
   
     

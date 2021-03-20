@@ -5,10 +5,10 @@ import { AiFillInstagram } from 'react-icons/ai';
 
 const Footer = () => {
     return (
-        <footer id="sticky-footer" className="bg-dark text-white text-light-50">
+        <footer id="sticky-footer" className="bg-dark text-white text-light-50 mt-5">
             <div className="container py-1">
                 <div className="row">
-                    <div className="col-md-6 col-12 my-auto">
+                    <div className="col-md-6 col-12 my-auto ">
                         <small>Copyright &copy; pgwale</small>
                     </div>
                     <div className="col-md-6 col-12">
